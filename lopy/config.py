@@ -22,6 +22,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 import pycom
 
 # Known wifi networks to connect to.
+# This is straight from the pycom documentation
+# See https://docs.pycom.io/chapter/tutorials/all/wlan.html
+# for an idea of how this variable can be set.
 known_nets = { # Change these to your own preferences
     'wedlin' : { 'pwd' : 'xxxxxxxxx' },
     'mwe on the move' : { 'pwd' : 'xxxxxx' }
