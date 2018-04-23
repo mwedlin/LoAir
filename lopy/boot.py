@@ -60,6 +60,8 @@ try:
 except:
     hasSD = False
 
+rtc = machine.RTC()
+
 # Connect to WiFi
 
 # Connect to wlan and stay in cmd prompt if reseted with button on pytrack
@@ -90,7 +92,6 @@ if isInteractive:
     else:
         print("Not connected to wlan.")
 
-rtc = machine.RTC()
 
 time.timezone(config.Timezone)
 print('Adjusted from UTC to EST timezone', time.localtime(), '\n')
