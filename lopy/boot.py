@@ -82,15 +82,15 @@ if isInteractive:
             x = x - 1
     except Exception as e:
         pass
+    if wlan.isconnected():
+        print("Connected to "+net_to_use+" with IP address:" + wlan.ifconfig()[0])
+        rtc.ntp_sync("pool.ntp.org")
+        utime.sleep_ms(750)
+        print('\nRTC Set from NTP to UTC:', rtc.now())
+    else:
+        print("Not connected to wlan.")
 
 rtc = machine.RTC()
-if wlan.isconnected():
-    print("Connected to "+net_to_use+" with IP address:" + wlan.ifconfig()[0])
-    rtc.ntp_sync("pool.ntp.org")
-    utime.sleep_ms(750)
-    print('\nRTC Set from NTP to UTC:', rtc.now())
-else:
-    print("Not connected to wlan.")
 
 time.timezone(config.Timezone)
 print('Adjusted from UTC to EST timezone', time.localtime(), '\n')
