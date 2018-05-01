@@ -1,7 +1,7 @@
 '''
 main.py
 
-PyAir - version 0.1
+LoAir - version 0.1
 
 Copyright (C) 2018  Mikael Wedlin, mwe@wedlin.pp.se
 
